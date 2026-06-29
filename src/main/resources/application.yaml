@@ -1,0 +1,28 @@
+server:
+  port: 8080
+
+spring:
+  data:
+    mongodb:
+      uri: ${MONGODB_URI}
+      database: lifesaver
+  application:
+    name: lifesaver
+
+jwt:
+  secret: ${JWT_SECRET}
+  expiration: 86400000
+
+gemini:
+  api:
+    key: ${GEMINI_API_KEY}
+    url: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent
+
+cors:
+  allowed:
+    origins: ${CORS_ORIGINS}
+
+logging:
+  level:
+    kanak.project.lifesaver: DEBUG
+    org.springframework.security: DEBUG
